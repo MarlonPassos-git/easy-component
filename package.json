@@ -3,12 +3,19 @@
 	"displayName": "fastStore component",
 	"description": "uma maneira de criar seus componentes react mais facil",
 	"version": "0.0.1",
+	"publisher": "1marlonpassos",
 	"engines": {
 		"vscode": "^1.67.0"
 	},
+	"license": "GPL-3.0",
+	"icon": "icon.png",
 	"categories": [
 		"Other"
 	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/MarlonPassos-git/easy-component.git"
+},
 	"activationEvents": [
 		"onCommand:easy-component.marlon",
 		"onCommand:easy-component.create-componente"
