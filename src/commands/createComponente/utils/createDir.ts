@@ -1,7 +1,7 @@
 import path = require("path");
 import * as fs from "fs";
 
-export const createDir = (targetDir: string) => {
+export function createDir (targetDir: string) {
   const sep = path.sep;
   const initDir = path.isAbsolute(targetDir) ? sep : "";
   const baseDir = __dirname;
@@ -10,7 +10,7 @@ export const createDir = (targetDir: string) => {
     const curDir = path.resolve(baseDir, parentDir, childDir);
     try {
       fs.mkdirSync(curDir);
-    } catch (err) {
+    } catch (err: any) {
       if (err.code === "EEXIST") {
         // curDir already exists!
         return curDir;

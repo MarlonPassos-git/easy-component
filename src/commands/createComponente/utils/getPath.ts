@@ -1,11 +1,16 @@
 import * as vscode from 'vscode';
 import { IArgs } from '../types/IArgs';
 
+const OPTIONS = [
+  'pdp-components/react/components',
+  'custom/react'
+];
+
 export async function getPath(args?: IArgs): Promise<string> {
   let path: string | undefined;
   // pegue o path do componente 
   if (!args) {
-      const userPath =  await vscode.window.showInputBox({
+      const userPath =  await vscode.window.showQuickPick(OPTIONS, {
       placeHolder: 'ex: src/components',
       title: 'Digite o caminho onde deseja criar o componente',
       ignoreFocusOut: true,
@@ -16,7 +21,6 @@ export async function getPath(args?: IArgs): Promise<string> {
     // remove a primeira letra do path
     path = args.path.substring(1);
   }
-
   // substitua '/' por '//'
   path = path.replace(/\//g, '\\\\');
   return path ?? '';

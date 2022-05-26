@@ -1,6 +1,6 @@
 {
 	"name": "easy-component",
-	"displayName": "easy component",
+	"displayName": "fastStore component",
 	"description": "uma maneira de criar seus componentes react mais facil",
 	"version": "0.0.1",
 	"engines": {
@@ -22,7 +22,7 @@
 			},
 			{
 				"command": "easy-component.create-componente",
-				"title": "🔨 Crie um componente react"
+				"title": "🔨 Crie um componente react (basico)"
 
 			}
 		],
